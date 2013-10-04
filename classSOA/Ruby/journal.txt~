@@ -1,0 +1,103 @@
+Learning Linux:
+
+9/30
+ls 				#list files and folders
+cd 				#change directory
+cd .. 				#change to previos directory
+mkdir 				#create a new folder
+cat 				#read the containt of the files
+nano 				#text editor
+vi				#text editor
+
+---------------------------------
+
+10/2
+rm 				#remove files
+rmdir 				#remove directories (must be empty)
+mv 				#move files or directoris
+cp				#copy
+clear 				#clear the screem
+
+
+
+
+
+
+***********************************************************
+
+Learning Ruby:
+
+*Practice on "try ruby.org" 
+
+#everything in Ruby is object
+"Str".reverse 			#reverse the string
+"Str".length 			#check out the length of the string
+to_s  				#converts to string
+to_i  				#converts to integers
+to_a  				#converts to arrays
+[]   				#array, can put anythings inside
+[].max	 			#find the maximun number of the array
+print 				#print things on the screem
+? 				#return true/false 
+	poem.include? "my hand"
+{} 				#Hash
+	books = {}
+	books["Gravity's Rainbow"] = :splendid
+	books["Gravity's Rainbow"]   		=> :splendid
+Int.times { print "Str" }	#print "Str" (Int) times
+Dir.entrie­s "/"			#listed out everything in the top directory
+/				# The root directory
+Dir[]				#like entries,but searching for files with wildcard character
+FileUtils.cp			#copy the file to another directory
+	FileUtils.cp('/comics.txt', '/Home/comics.txt')
+Time.now			#show what time is it
+def load_comics( path )		#create a method call load_comics
+				#path is a variable
+split				#method for strings, breaks the string up into an array
+require 'popup'			#same as JAVA Import
+
+#code practice
+
+Popup.make {
+  h1 "My Links"			#h1 means a level-one header
+  link "Go to Ruby", "http://ruby-lang.org/"	
+}				
+
+#code practice
+
+Popup.make do
+  h1 "Things To Do"
+  list do
+    p "Try out Ruby"		#p method is short for "paragraph"
+    p "Ride a tiger"
+    p "(down River Euphrates)"
+  end
+end
+
+#code practice
+
+Popup.make do
+  h1 "Comics on the Web"
+  list do
+    comics.each do |name, url|
+      link name, url
+    end
+  end
+end
+
+
+
+#Final chellenge code:
+
+Popup.make­ do
+	h1 "Davi­n's Blog"­
+	blog.each do |entr­y|
+		h2 entry­.title
+		p entry­.time
+		p entry­.fulltext
+		end
+	end
+
+
+
+
