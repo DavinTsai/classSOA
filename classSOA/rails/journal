@@ -1,0 +1,40 @@
+Learning Rails:
+
+#CRUD指的是Create(新增)、Read(讀取)、Update(更新)、Delete(刪除)四種操作資料的基本方式。
+
+Gemfile	設定Rails應用程式會使用哪些Gems套件
+README	專案說明：你可以用來告訴其他人你的應用程式是做什麼用的，如何使用等等。
+Rakefile	用來載入可以被命令列執行的一些Rake任務
+app/	放Controllers、Models和Views檔案，接下來的內容主要都在這個目錄。
+config/	應用程式設定檔、路由規則、資料庫設定等等
+config.ru	用來啟動應用程式的Rack伺服器設定檔
+db/	資料庫的結構綱要
+doc/	用來放你的文件
+lib/	放一些自定的Module和類別檔案
+log/	應用程式的Log記錄檔
+public/	唯一可以在網路上看到的目錄，這是你的圖檔、JavaScript、CSS和其他靜態檔案擺放的地方
+script/	放rails這個指令和放其他的script指令
+test/	單元測試、fixtures及整合測試等程式
+tmp/	暫時性的檔案
+vendor/	用來放第三方程式碼外掛的目錄
+rails new name			#create new rails app
+
+bundle install --without production
+				#check if any gems are missing
+rails server			#start the app
+
+#local index: 	http://localhost:3000
+
+rake routes    			#會產生出所有URL Helper、URL 網址和對應的Controller Action都列出來
+
+rake db:create 依照目前的 RAILS_ENV 環境建立資料庫
+rake db:create:all 建立所有環境的資料庫
+rake db:drop 依照目前的 RAILS_ENV 環境刪除資料庫
+rake db:drop:all 刪除所有環境的資料庫
+rake db:migrate 執行Migration動作
+rake db:rollback STEP=n 回復上N個 Migration 動作
+rake db:migrate:up VERSION=20080906120000 執行特定版本的Migration
+rake db:migrate:down VERSION=20080906120000 回復特定版本的Migration
+rake db:version 目前資料庫的Migration版本
+rake db:seed 執行 db/seeds.rb 載入種子資料
+

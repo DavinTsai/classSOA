@@ -1,0 +1,13 @@
+Learning Rails:
+
+rails new name			#create new rails app
+
+bundle install --without production
+				#check if any gems are missing
+rails server			#start the app
+
+#local index: 	http://localhost:3000
+
+rake routes    			#會產生出所有URL Helper、URL 網址和對應的Controller Action都列出來
+
+
