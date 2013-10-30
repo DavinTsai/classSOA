@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
+    has_many :reviews
     before_save :capitalize_title
   def capitalize_title
     self.title = self.title.split(/\s+/).map(&:downcase).
@@ -10,6 +11,7 @@ class Movie < ActiveRecord::Base
   validate :released_1930_or_later # uses custom validator below
   validates :rating, :inclusion => {:in => Movie.all_ratings},
     :unless => :grandfathered?
+  
   def released_1930_or_later
     errors.add(:release_date, 'must be 1930 or later') if
       self.release_date < Date.parse('1 Jan 1930')

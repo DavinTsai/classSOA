@@ -2,9 +2,7 @@ Myrottenpotatoes::Application.routes.draw do
 devise_for :moviegoers, :controllers => { :omniauth_callbacks => "moviegoers/omniauth_callbacks" }
   
 
-resources :movies do
-  resources :reviews
-  end
+  resources :movies
   root :to => redirect('/movies')
 
 
